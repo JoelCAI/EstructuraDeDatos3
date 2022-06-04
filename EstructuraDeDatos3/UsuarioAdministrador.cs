@@ -115,7 +115,7 @@ namespace EstructuraDeDatos3
 				else
 				{
 					VerPersona();
-					Console.WriteLine("\n Como puede verificar no se creo ninguna Empleado");
+					Console.WriteLine("\n Como puede verificar no se creo ningún Empleado");
 					Validador.VolverMenu();
 
 				}
@@ -125,7 +125,7 @@ namespace EstructuraDeDatos3
 			{
 				VerPersona();
 				Console.WriteLine("\n Usted digitó el legajo *" + legajo + "*");
-				Console.WriteLine("\n Ya existe un empleado con ese legajo");
+				Console.WriteLine("\n Ya existe un Empleado con ese legajo");
 				Console.WriteLine("\n Será direccionado nuevamente al Menú para que lo realice correctamente");
 				Validador.VolverMenu();
 
@@ -162,7 +162,7 @@ namespace EstructuraDeDatos3
 				}
 			}
 			VerPersona();
-			Console.WriteLine("Se ha grabado los datos de las personas en la Agenda correctamente");
+			Console.WriteLine("Se ha grabado los datos de los Empleados correctamente");
 			Validador.VolverMenu();
 
 		}
@@ -170,7 +170,7 @@ namespace EstructuraDeDatos3
 		protected override void LeerEmpleado()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en la agenda: ");
+			Console.WriteLine("\n Empleados: ");
 			using (var archivoLista = new FileStream("archivoLista.txt", FileMode.Open))
 			{
 				using (var archivoLecturaAgenda = new StreamReader(archivoLista))
@@ -205,8 +205,8 @@ namespace EstructuraDeDatos3
 				VerPersona();
 
 				Console.WriteLine(
-								  "\n Marca del Auto a Crear: " + marca +
-								  "\n Modelo del Auto a Crear: " + modelo);
+								  "\n Nombre Empleado: " + marca +
+								  "\n Apellido Empleado: " + modelo);
 
 				Console.WriteLine(mensaje);
 				Console.WriteLine(mensajeError);
@@ -268,7 +268,7 @@ namespace EstructuraDeDatos3
 		public void VerPersona()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en Agenda");
+			Console.WriteLine("\n Empleado");
 			Console.WriteLine(" #\t\tLegajo.\t\tNombre.\t\tApellido.");
 			for (int i = 0; i < Empleado.Count; i++)
 			{
@@ -289,7 +289,7 @@ namespace EstructuraDeDatos3
 
 		public void VerPersonaDiccionario()
 		{
-			Console.WriteLine("\n Autos en el Diccionario");
+			Console.WriteLine("\n Empleados en el Diccionario");
 			for (int i = 0; i < empleadoLista.Count; i++)
 			{
 				KeyValuePair<int, Empleado> persona = empleadoLista.ElementAt(i);
